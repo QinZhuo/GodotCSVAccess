@@ -1,4 +1,3 @@
-@icon("res://addons/CSVAccess/icon.png")
 @tool
 class_name CSVAccess
 extends RefCounted

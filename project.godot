@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="CSVAccess"
-config/tags=PackedStringArray("tool", "tween")
-run/main_scene="uid://dns5m0knusac8"
+config/tags=PackedStringArray("tool")
+run/main_scene="uid://cm1rkfgjpynnm"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="uid://b45twlbiko1sk"
+config/icon="uid://dwyawg717x5jf"
 
 [editor_plugins]
 
