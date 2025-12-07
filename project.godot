@@ -1,0 +1,21 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CSVAccess"
+config/tags=PackedStringArray("tool", "tween")
+run/main_scene="uid://dns5m0knusac8"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="uid://b45twlbiko1sk"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/CSVAccess/plugin.cfg")
