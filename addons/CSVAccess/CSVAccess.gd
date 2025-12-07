@@ -81,6 +81,9 @@ static func save_csv_data(path: String, data: Dictionary[String, Dictionary]) ->
 	file.close()
 	print("CSV file saved to: ", path)
 
+static func get_csv_value(path: String, id: String, column: String, default: String = "") -> String:
+	var data := load_csv_data(path)
+	return data.get_or_add(id, {}).get_or_add(column, default)
 
 static func set_csv_value(path: String, id: String, column: String, value: String):
 	var data := load_csv_data(path)
