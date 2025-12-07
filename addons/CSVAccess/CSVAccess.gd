@@ -4,7 +4,7 @@ class_name CSVAccess
 extends RefCounted
 
 ## Load CSV file and return dictionary (ID -> data dictionary)
-static func load_csv_file(path: String) -> Dictionary[String, Dictionary]:
+static func load_csv_data(path: String) -> Dictionary[String, Dictionary]:
 	var data: Dictionary[String, Dictionary] = {}
 	var file = FileAccess.open(path, FileAccess.READ)
 	if file == null:
@@ -37,7 +37,7 @@ static func load_csv_file(path: String) -> Dictionary[String, Dictionary]:
 
 
 ## Save dictionary to CSV file
-static func save_csv_file(path: String, data: Dictionary[String, Dictionary]) -> void:
+static func save_csv_data(path: String, data: Dictionary[String, Dictionary]) -> void:
 	if !path.ends_with(".csv"):
 		path += ".csv"
 
@@ -80,3 +80,9 @@ static func save_csv_file(path: String, data: Dictionary[String, Dictionary]) ->
 
 	file.close()
 	print("CSV file saved to: ", path)
+
+
+static func set_csv_value(path: String, id: String, column: String, value: String):
+	var data := load_csv_data(path)
+	data.get_or_add(id, {})[column] = value
+	save_csv_data(path, data)

@@ -3,7 +3,7 @@ extends Node3D
 
 func _ready():
 	# Load CSV data
-	var data = CSVAccess.load_csv_file("res://demo/test.csv")
+	var data = CSVAccess.load_csv_data("res://demo/test.csv")
 	
 	## Modify CSV data
 
@@ -13,4 +13,4 @@ func _ready():
 
 	# Save CSV data
 
-	CSVAccess.save_csv_file("res://demo/test.csv", data)
+	CSVAccess.save_csv_data("res://demo/test.csv", data)
