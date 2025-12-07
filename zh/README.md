@@ -7,18 +7,17 @@
 
 ## 使用方法
 
-```gdscript
-# 加载CSV数据
 
-var data = CSVAccess.load_csv_data("res://demo/test.csv")
+### 加载CSV数据
 
-## 修改CSV数据
+	var data = CSVAccess.load_csv_data("res://demo/test.csv")
 
-data["key_1"]["en"] = str("key_1_ ", randi())
-data["key_2"] = {en = str("key_2_ ", randi())}
-data["key_3"] = {"en": str("key_3_ ", randi())}
+### 修改CSV数据
 
-# 保存CSV数据
+	data["key_1"]["en"] = str("key_1_ ", randi())
+	data["key_2"] = {en = str("key_2_ ", randi())}
+	data["key_3"] = {"en": str("key_3_ ", randi())}
 
-CSVAccess.save_csv_data("res://demo/test.csv", data)
-```
+### 保存CSV数据
+
+	CSVAccess.save_csv_data("res://demo/test.csv", data)
